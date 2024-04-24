@@ -1,0 +1,51 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+/* section */
+.section {
+  position: relative;
+  padding: 64px 0;
+
+  &_purple {
+    background-color: $deep-purple-50;
+  }
+
+  @media (min-width: $screen-sm) {
+    padding: 80px 0;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 115px 0;
+  }
+}
+
+.section__inner {
+  max-width: $shell-width;
+  padding: 0 $shell-padding;
+  margin: 0 auto;
+}
+
+.section__header {
+  text-align: center;
+}
+
+.section__title {
+  margin: 0;
+}
+
+.section__label {
+  margin: 6px 0 0 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.33;
+  color: $grey-500;
+}
+
+.section__component {
+  margin-top: 38px;
+
+  @media (min-width: $screen-sm) {
+    margin-top: 44px;
+  }
+}
+/* !section */

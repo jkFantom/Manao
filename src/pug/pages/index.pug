@@ -1,0 +1,27 @@
+extends ../layouts/layout
+
+block head
+  +head()
+
+block header
+  +header({})
+
+block content
+  +intro({
+    label: 'Верстка. Программирование. Дизайн.',
+    title: 'Техническая поддержка сайтов и корпоративных порталов',
+  })
+
+  main.main
+    include ../blocks/about
+
+    include ../blocks/services
+
+    include ../blocks/articles
+
+block footer
+  include ../blocks/footer
+
+  include ../blocks/mobile-layer
+
+  include ../blocks/dialog

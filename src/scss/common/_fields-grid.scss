@@ -1,0 +1,205 @@
+@import '../helpers/mixins';
+@import '../helpers/variables';
+
+/* form-component */
+.form-component {
+  display: grid;
+  gap: 25px;
+}
+
+.form-component__hint {
+  margin: 0;
+  font-size: 12px;
+  color: $deep-purple-200;
+
+  a {
+    @include transition;
+
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    color: currentColor;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.form-component__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-top: 5px;
+
+  @media (min-width: $screen-xl) {
+    flex-direction: initial;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+}
+
+.form-component__submit {
+  align-self: center;
+}
+/* !form-component */
+
+/* fields-grid */
+.fields-grid {
+  display: grid;
+  gap: 28px;
+}
+/* !fields-grid */
+
+/* field */
+.field {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.187;
+}
+
+.field__input {
+  $this: &;
+
+  @include transition;
+  @include text-overflow;
+
+  display: block;
+  width: 100%;
+  height: 52px;
+  padding: 0 20px;
+  background: transparent;
+  border: 2px solid $deep-purple-500;
+  border-radius: 4px;
+  text-align: left;
+  color: #fff;
+
+  &_multiline {
+    height: 162px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    resize: none;
+    white-space: initial;
+  }
+
+  &:hover,
+  &:focus,
+  &_active {
+    border-color: $purple-600;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus ~ .field__label,
+  &_filled ~ .field__label {
+    top: -17px;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
+.field__label {
+  @include text-overflow;
+  @include transition;
+
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  left: 22px;
+  color: $deep-purple-200;
+  pointer-events: none;
+}
+
+.field__error {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.16;
+  color: $purple-300;
+}
+/* field */
+
+/* toggles */
+.toggle-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.toggle {
+  $this: &;
+
+  position: relative;
+  display: inline-flex;
+  gap: 14px;
+  align-items: flex-start;
+
+  &__input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &__box {
+    @include transition;
+
+    position: relative;
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    aspect-ratio: 1;
+    background: transparent;
+    border: 2px solid $deep-purple-500;
+    overflow: hidden;
+  }
+
+  #{$this}_checkbox &__box {
+    border-radius: 2px;
+  }
+
+  #{$this}_radio &__box {
+    border-radius: 50%;
+  }
+
+  &__box:after {
+    content: '';
+    color: #fff;
+    opacity: 0;
+  }
+
+  #{$this}_checkbox &__box:after {
+    margin-top: -2px;
+    width: 6px;
+    height: 10px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(40deg);
+  }
+
+  #{$this}_radio &__box:after {
+    height: 12px;
+    aspect-ratio: 1;
+    background: transparent;
+    border-radius: 50%;
+  }
+
+  &__input:checked + &__box:after {
+    opacity: 1;
+  }
+
+  #{$this}_checkbox &__input:hover + &__box {
+    border-color: $purple-600;
+  }
+
+  &__label {
+    @include font(15px, 1.2, 300);
+
+    padding-top: 2px;
+  }
+}
+/* !toggles */

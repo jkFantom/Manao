@@ -1,0 +1,113 @@
+@import '../../scss/helpers/variables';
+
+@mixin font(
+  $font-size: $font-size-base,
+  $line-height: $line-height-base,
+  $font-weight: 400,
+  $font-family: $font-family-base,
+  $font-style: normal
+) {
+  font: $font-weight $font-style #{$font-size}/#{$line-height} $font-family;
+}
+
+@mixin transition(
+  $property: all,
+  $duration: $duration-base,
+  $timing-function: $timing-function-base,
+  $delay: 0
+) {
+  transition: $property $duration $timing-function;
+}
+
+@mixin placeholder() {
+  &::placeholder {
+    @include transition;
+
+    color: $deep-purple-200;
+    opacity: 1;
+  }
+
+  &:focus::placeholder {
+    text-indent: -50px;
+    opacity: 0;
+  }
+}
+
+@mixin fake-placeholder {
+  @include transition;
+
+  &_active {
+    text-indent: -50px;
+    color: transparent;
+  }
+}
+
+@mixin abs-centering() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flex-centering($display: 'flex') {
+  @if $display == 'flex' {
+    display: flex;
+  }
+
+  @if $display == 'inline-flex' {
+    display: inline-flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin overlay() {
+  position: absolute;
+  inset: 0;
+}
+
+@mixin text-overflow() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin text-overflow-multiline($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin custom-scroll() {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 3px;
+    background: rgba(202, 204, 209, 0.1);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: $deep-purple-200;
+  }
+}
+
+@mixin icon($size: 24px) {
+  display: inline-flex;
+  width: 1em;
+  aspect-ratio: 1;
+  font-size: $size;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

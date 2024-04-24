@@ -1,0 +1,153 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  color: #fff;
+
+  &[data-fixed] {
+    background: $deep-purple-800;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+.header__overlay {
+  position: relative;
+  padding: 26px 0;
+
+  @media (min-width: $screen-1024) {
+    padding: 38px 0;
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: $shell-width;
+  padding: 0 $shell-padding;
+  margin: 0 auto;
+}
+/* !header */
+
+/* logo */
+.logo {
+  height: 28px;
+}
+
+.logo__img,
+.logo__link {
+  display: block;
+  width: 100%;
+}
+/* !logo */
+
+/* toolbar */
+.toolbar {
+  flex: 1;
+  display: none;
+  align-items: center;
+  gap: 24px;
+
+  @media (min-width: $screen-1024) {
+    display: flex;
+  }
+}
+
+.toolbar__nav {
+  margin: 0 auto;
+}
+/* !toolbar */
+
+/* contact-links */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  @media (min-width: $screen-1024) {
+    flex-direction: initial;
+    align-items: center;
+    gap: 44px;
+  }
+}
+
+.contact-links__link {
+  @include transition;
+  @include font(17px, 1, 400, $font-family-secondary);
+
+  position: relative;
+  padding-left: 32px;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  color: #fff;
+
+  &:hover {
+    color: $deep-purple-200;
+  }
+}
+
+.contact-links__icon {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  font-size: 16px;
+}
+/* !contact-links */
+
+/* control-buttons */
+.control-button {
+  @include transition;
+  @include flex-centering;
+
+  flex: none;
+  border: none;
+  padding: 0;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  color: inherit;
+
+  &[data-mobile-nav] {
+    @media (min-width: $screen-1024) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    color: $deep-purple-200;
+  }
+}
+
+.control-button__icon {
+  font-size: inherit;
+}
+/* !control-button */
+
+/* nav */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding-top: 2px;
+  color: #fff;
+}
+
+.nav__link {
+  @include transition;
+  @include font(17px, 1, 500, $font-family-secondary);
+
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: $deep-purple-200;
+  }
+}
+/* !nav */

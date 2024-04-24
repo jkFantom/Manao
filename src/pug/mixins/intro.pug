@@ -1,0 +1,18 @@
+mixin intro(options)
+  .intro
+    .intro__layout
+      .intro__overlay
+
+      .intro__body
+        p.intro__label= options.label
+
+        h1.h1.intro__title= options.title
+
+        button.button.intro__button Отправить сайт на оценку
+
+      .intro__footer
+        .partners
+          .partners__title Партнеры:
+          .partners__logos
+            img(src='./images/bitrix24.webp', alt='#').partners__logo
+            img(src='./images/1c-bitrix.webp', alt='#').partners__logo

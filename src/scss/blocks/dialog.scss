@@ -1,0 +1,57 @@
+@import '../helpers/mixins';
+@import '../helpers/variables';
+
+.dialog {
+  border: none;
+  padding: 0;
+  background: transparent;
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.dialog__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $deep-purple-500;
+  padding: 24px;
+  max-width: 360px;
+  min-height: 180px;
+  background: $deep-purple-50;
+  border-radius: 8px;
+}
+
+.dialog__title {
+  @include font(20px, 1.2, 400);
+}
+
+.close-button {
+  @include transition;
+  @include flex-centering;
+
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  color: $deep-purple-200;
+
+  &[data-mobile-nav] {
+    @media (min-width: $screen-1024) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    color: $purple-300;
+  }
+}
+
+.close-button__icon {
+  font-size: inherit;
+}

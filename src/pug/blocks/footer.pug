@@ -1,0 +1,81 @@
+footer.footer
+  .footer__inner
+    .footer__grid
+      .footer__hgroup
+        h2.h2.footer__title Отправить сайт на оценку
+        p.footer__label Рассчитать смету? Проконсультировать по проекту? Подписать NDA? Легко!
+
+      form.footer__form.form-component(name='feedback-form')
+        .fields-grid
+          label.field
+            input.field__input(type='text', name='name')
+            .field__label Ваше имя
+            .field__error
+
+          label.field
+            input.field__input(type='text', name='website')
+            .field__label Адрес сайта
+            .field__error
+
+          label.field
+            textarea.field__input.field__input_multiline(name='comment')
+            .field__label Описание задач
+            .field__error
+
+        .toggle-group
+          label.toggle.toggle_checkbox
+            input.toggle__input(type='checkbox', name='cb1')
+            span.toggle__box
+            span.toggle__label Мне нужна консультация
+
+          label.toggle.toggle_checkbox
+            input.toggle__input(type='checkbox', checked, name='cb2')
+            span.toggle__box
+            span.toggle__label Подберите для нас тариф
+
+          label.toggle.toggle_checkbox
+            input.toggle__input(type='checkbox', name='cb3')
+            span.toggle__box
+            span.toggle__label Готовы предоставить доступ для более детальной оценки
+
+        .form-component__footer
+          p.form-component__hint
+            | Нажимая на кнопку, вы соглашаетесь на обработку
+            = ' '
+            a(href='#', target='_blank') персональных данных
+
+          button.button.form-component__submit(type='submit') Отправить заявку
+
+      .footer__contacts.contacts
+        .contacts__item
+          .contacts__label Наш адрес
+          .contacts__value Минск, Бирюзова 4/5, каб. 4005
+
+        .contacts__item
+          .contacts__label Время работы
+          .contacts__value пн-пт, с 9:00 до 18:00
+
+        .contacts__item
+          .contacts__label Звоните
+          .contacts__value +7 (495) 128-13-24
+
+        .contacts__item
+          .contacts__label Пишите
+          .contacts__value info@manao-team.com
+          .contacts__value @ManaoTeamBot (Telegram, Viber)
+
+        .contacts__item.contacts__item_floating
+          .social-links
+            .social-links__item
+              a.social-links__link(href='#', target='_blank') Facebook
+            .social-links__item
+              a.social-links__link(href='#', target='_blank') Instagram
+            .social-links__item
+              a.social-links__link(href='#', target='_blank') Vkontakte
+
+    .footer__bottom
+      include payment
+
+      .footer__helpers
+        a.footer__helper(href='#', target='_blank') Политика обработки персональных данных
+        a.footer__helper(href='#', target='_blank') Manao.Support — «Битриксоиды» до мозга костей :)

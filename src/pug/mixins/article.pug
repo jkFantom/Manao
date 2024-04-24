@@ -1,0 +1,13 @@
+mixin article(options)
+  article.article
+    img.article__img(src=`./images/${options.img}.webp`, alt='#')
+
+    .article__body
+      section.article__section
+        .article__title= options.title
+
+        p.article__text= options.text
+
+      footer.article__footer
+        img.raticle__logo(src=`./images/${options.logo}.webp`, alt='#')
+        time.article__time(datetime=`${options.timeFormat}`)= options.time

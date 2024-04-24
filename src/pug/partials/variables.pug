@@ -1,0 +1,464 @@
+
+-
+  var baseUrl = 'http://localhost:8080';
+
+  var nav = [
+    {
+      link: 'Solutions',
+      sublist: [
+        {
+          page: 'BolaWrap',
+          anchors: [
+            'What is BolaWrap',
+            'Accessories',
+            'Testimonials',
+          ]
+        },
+        {
+          page: 'WrapReality',
+          anchors: [
+            'What is WrapReality',
+            'Testimonials',
+            'Features & Benefits',
+          ]
+        }
+      ]
+    },
+    {
+      link: 'Resources',
+      sublist: [
+        {
+          page: 'Community'
+        },
+        {
+          page: 'Grants'
+        },
+        {
+          page: 'Partners',
+          anchors: [
+            'What is BolaWrap',
+            'Accessories',
+            'Testimonials',
+          ]
+        },
+        {
+          page: 'Events'
+        },
+        {
+          page: 'Demonstrations',
+        }
+      ]
+    },
+    {
+      link: 'Intrensic',
+    },
+    {
+      link: 'Media',
+    },
+    {
+      link: 'Investors',
+    },
+    {
+      link: 'About Us',
+      sublist: [
+        {
+          page: 'FAQ',
+          partPath: 'faqs',
+          anchors: [
+            'General',
+            'Wrap Reality',
+            'BolaWrap',
+            'Intrensic',
+          ],
+          interactive: true
+        },
+      ]
+    },
+  ];
+
+  var imagesSet = [
+    'images-set-img4',
+    'images-set-img5',
+    'images-set-img6',
+  ];
+
+  var articlesType1 = [
+    {
+      img: 'article-img1',
+      title: 'Lowell Police using new technology to avoid use of force',
+    },
+    {
+      title: 'Wrap Reality Exceeds 2022’s Total Sales in Just Six Months, Revolutionizing Immersive Learning Experiences for Law Enforcement',
+      text: 'Wrap Reality’s groundbreaking approach is centered around scenario-based training, enabling law enforcement agencies to simulate real-life situations and develop critical decision-making skills under high-stress environments.',
+    },
+    {
+      img: 'article-img3',
+      title: 'Lowell Police using new technology to avoid use of force',
+    },
+    {
+      title: 'Wrap Reality Exceeds 2022’s Total Sales in Just Six Months, Revolutionizing Immersive Learning Experiences for Law Enforcement',
+      text: 'Wrap Reality’s groundbreaking approach is centered around scenario-based training, enabling law enforcement agencies to simulate real-life situations and develop critical decision-making skills under high-stress environments.',
+    },
+    {
+      img: 'article-img5',
+      title: 'Lowell Police using new technology to avoid use of force',
+    },
+    {
+      title: 'Wrap Reality Exceeds 2022’s Total Sales in Just Six Months, Revolutionizing Immersive Learning Experiences for Law Enforcement',
+      text: 'Wrap Reality’s groundbreaking approach is centered around scenario-based training, enabling law enforcement agencies to simulate real-life situations and develop critical decision-making skills under high-stress environments.',
+    },
+  ];
+
+  var articlesType2 = [
+    {
+      img: 'article-img1',
+      title: 'Lowell Police using new technology to avoid use of force',
+    },
+    {
+      img: 'article-img2',
+      title: 'Lowell Police using new technology to avoid use of force',
+    },
+    {
+      img: 'article-img3',
+      title: 'Lowell Police using new technology to avoid use of force',
+    },
+    {
+      img: 'article-img4',
+      title: 'Lowell Police using new technology to avoid use of force',
+    },
+    {
+      img: 'article-img5',
+      title: 'Lowell Police using new technology to avoid use of force',
+    },
+    {
+      img: 'article-img6',
+      title: 'Lowell Police using new technology to avoid use of force',
+    },
+    {
+      img: 'article-img7',
+      title: 'Lowell Police using new technology to avoid use of force',
+    },
+    {
+      img: 'article-img8',
+      title: 'Lowell Police using new technology to avoid use of force',
+    },
+    {
+      img: 'article-img9',
+      title: 'Lowell Police using new technology to avoid use of force',
+    },
+  ];
+
+  var teamList1 = [
+    {
+      img: 'team-img1',
+      pos: 'Chief executive officer',
+      name: 'Kevin Mullins',
+      bio: [
+        'Kevin initially joined Wrap Technologies as President in April 2022, and was appointed CEO in April 2023. He is a proven business strategist and experienced corporate leader.',
+      ],
+    },
+    {
+      img: 'team-img2',
+      pos: 'Chief financial officer',
+      name: 'Chris DeAlmeida',
+      bio: [
+        'Kevin initially joined Wrap Technologies as President in April 2022, and was appointed CEO in April 2023. He is a proven business strategist and experienced corporate leader.',
+      ],
+    },
+    {
+      img: 'matt-team',
+      pos: 'Chief marketing officer',
+      name: 'Chris DeAlmeida',
+      bio: [
+        'Kevin initially joined Wrap Technologies as President in April 2022, and was appointed CEO in April 2023. He is a proven business strategist and experienced corporate leader.',
+      ]
+    },
+  ];
+
+  var teamList2 = [
+    {
+      img: 'team-img1',
+      pos: 'Chief executive officer',
+      name: 'Kevin Mullins',
+      bio: [
+        'Kevin initially joined Wrap Technologies as President in April 2022, and was appointed CEO in April 2023. He is a proven business strategist and experienced corporate leader.',
+
+         'Prior to joining Wrap Technologies, he served as President and CEO of Intrensic, a premier digital evidence and video management software solutions company. During his tenure, he led the development of new technology and set the direction of the company, and was instrumental in marketing its solutions to corporate and public safety entities. Kevin also served at the CEO of SaferMobility, a video NG911 solutions provider for public and private enterprise safety.',
+
+         'Prior to his venture into building SaaS safety solutions, Kevin was a commercial banker and bank director. He brings deep knowledge of relevant customer markets to Wrap.',
+      ],
+    },
+    {
+      img: 'team-img2',
+      pos: 'Chief financial officer',
+      name: 'Chris DeAlmeida',
+      bio: [
+        'Kevin initially joined Wrap Technologies as President in April 2022, and was appointed CEO in April 2023. He is a proven business strategist and experienced corporate leader.',
+      ],
+    },
+    {
+      img: 'team-img3',
+      pos: 'Chief marketing officer',
+      name: 'Chris DeAlmeida',
+      bio: [
+        'Kevin initially joined Wrap Technologies as President in April 2022, and was appointed CEO in April 2023. He is a proven business strategist and experienced corporate leader.',
+      ],
+    },
+    {
+      img: 'team-img4',
+      pos: 'Svp corporate controller',
+      name: 'Kelcie Brady',
+      bio: [
+        'Kevin initially joined Wrap Technologies as President in April 2022, and was appointed CEO in April 2023. He is a proven business strategist and experienced corporate leader.',
+      ],
+    },
+    {
+      img: 'team-img5',
+      pos: 'Chief financial officer',
+      name: 'Chris DeAlmeida',
+      bio: [
+        'Kevin initially joined Wrap Technologies as President in April 2022, and was appointed CEO in April 2023. He is a proven business strategist and experienced corporate leader.',
+      ],
+    },
+  ];
+
+  var infoBoxType1 = {
+    img: 'info-box-img1',
+    label: 'Who we are',
+    title: 'Wrap Technologies is a global leader in innovative public safety technologies and services.',
+    text: [
+      'Our BolaWrap® 150 discharges a Kevlar® cord that can temporarily restrain an individual from up to 25 feet away. With one deployment of the BolaWrap and wrapping the subject’s arms or legs, officers can restrict the subject’s mobility and restrain them without incident. A recent UK report rated the BolaWrap as “safer than handcuffs” on the Use-of-Force Continuum. With over 800 law enforcement agencies across the U.S. and in over 54 countries, the BolaWrap is quickly becoming the tool officers ',
+
+      'Our Wrap Reality™ VR Training platform handles real-world calls. Train virtually with essential gear, such as a service weapon, TASER, OC Spray, Bean Bag Rounds, BolaWrap, and much more. With this fully-immersive training simulator, first responders can run through scenarios centered around marksmanship, de-escalation and judgment.   '
+    ]
+  };
+
+  var infoBoxType2 = {
+    img: 'info-box-img2',
+    label: 'Our vision',
+    title: 'Enhance law enforcement-community relationships',
+    text: [
+      'Only in a world where individuals have unwavering trust and confidence in public safety agencies to safeguard their personal safety and well-being can there be a sense of security and peace within communities.'
+    ]
+  };
+
+  var infoBoxType2rtl = {
+    direction: 'rtl',
+    img: 'info-box-img2',
+    label: 'Our vision',
+    title: 'Enhance law enforcement-community relationships',
+    text: [
+      'Only in a world where individuals have unwavering trust and confidence in public safety agencies to safeguard their personal safety and well-being can there be a sense of security and peace within communities.'
+    ]
+  };
+
+  var infoBoxType3 = {
+    direction: 'rtl',
+    img: 'info-box-img3',
+    label: 'Our mission',
+    title: 'At Wrap Technologies, we are focused on saving lives.',
+    text: [
+      'We are leading the industry and empowering public safety with innovative training and tools to take individuals safely into custody without having to use force, ultimately reducing the risk of injury to subjects and to officers.'
+    ]
+  };
+
+  var infoBoxType4 = {
+    direction: 'rtl',
+    img: 'info-box-img4',
+    label: 'Our mission',
+    title: 'At Wrap Technologies, we are focused on saving lives.',
+    text: [
+      'We are leading the industry and empowering public safety with innovative training and tools to take individuals safely into custody without having to use force, ultimately reducing the risk of injury to subjects and to officers.'
+    ]
+  };
+
+  var infoBoxType5 = {
+    img: 'info-box-img5',
+    label: 'Our mission',
+    title: 'Enhance law enforcement-community relationships.',
+    text: [
+      'Only in a world where individuals have unwavering trust and confidence in public safety agencies to safeguard their personal safety and well-being can there be a sense of security and peace within communities.'
+    ]
+  };
+
+  var infoBoxType6 = {
+    img: 'info-box-img6',
+    title: 'Leading provider of advanced public safety solutions.',
+    text: [
+      'Wrap Technologies strives to drive safer outcomes, empowering communities and law enforcement to move forward together.'
+    ]
+  };
+
+  var infoBoxType8 = {
+    direction: 'rtl',
+    img: 'info-box-img8',
+    label: 'Grant assistance',
+    title: 'Wrap Technologies has partnered with Lexipol’s Grant Assistance Program (GAP) to assist law enforcement agencies and institutions in identifying various funding options for both the BolaWrap 150 Remote Restraint Device and Wrap Reality VR Training platform.',
+    text: [
+      'There are many different traditional and non-traditional funding streams available for these unique de-escalation solutions including state and federal grants, public and private foundations, insurance risk pool partnerships and others.',
+      'To get started and to learn more about the benefits of the no-cost Grant Assistance Program provided by Lexipol, complete the short form below.  You will receive a follow up email verifying your information and a short questionnaire from Lexipol.',
+      'Once complete, a Lexipol Customer Success Manager will contact you directly as will a member of the Wrap Technologies team.  You will then have free access to the robust Grant Finder Database and all of the resources of Lexipol’s Grant Assistance Program.'
+    ]
+  };
+
+
+
+  var infoBoxType7 = {
+    img: 'info-box-img7',
+    label: 'Who we are',
+    title: 'Wrap Technologies is a global leader in innovative public safety technologies and services.',
+    text: [
+      'Our BolaWrap® 150 discharges a Kevlar® cord that can temporarily restrain an individual from up to 25 feet away. With one deployment of the BolaWrap and wrapping the subject’s arms or legs, officers can restrict the subject’s mobility and restrain them without incident. A recent UK report rated the BolaWrap as “safer than handcuffs” on the Use-of-Force Continuum. With over 800 law enforcement agencies across the U.S. and in over 54 countries, the BolaWrap is quickly becoming the tool officers ',
+
+      'Our Wrap Reality™ VR Training platform handles real-world calls. Train virtually with essential gear, such as a service weapon, TASER, OC Spray, Bean Bag Rounds, BolaWrap, and much more. With this fully-immersive training simulator, first responders can run through scenarios centered around marksmanship, de-escalation and judgment.   '
+    ]
+  };
+
+  var textContentType1 = [
+    'Wrap’s BolaWrap® solution encompasses an innovative and patented hand-held remote restraint device, strategically engineered with Wrap’s no-harm guiding principle to proactively deter escalation by deploying a Kevlar® tether that safely restrains individuals from a distance. Combined with BolaWrap® training, certified by the esteemed International Association of Directors of Law Enforcement Standards and Training (IADLEST), Wrap enables officers from over 900 agencies across the US and 60 countries around the world, with the expertise to effectively use BolaWrap® as an early intervention measure, mitigating potential risks and injuries, averting tragic outcomes.',
+
+    'Wrap Reality™, the Company’s advanced virtual reality training system, is a fully immersive training simulator and comprehensive public safety training platform equips first responders with the discipline and practice to prevent escalation, de-escalate conflicts, and apply appropriate tactical use-of-force measures to better perform in the field. By offering a growing range of real-life scenarios, Wrap Reality™ addresses the dynamic nature of modern law enforcement situations for positive public safety outcomes.',
+  ];
+
+  var textContentType2 = [
+    'WRAP believes in the benefits of a diverse workforce. We pride ourselves on hiring and developing the best people, without regard to race, religion, color, national origin, gender, sexual orientation, age, disability, marital status, veteran status, military status, pregnancy, or any other factors protected by law.',
+  ]
+
+  var eventsType1 = Array(27).fill(
+    {
+      label: 'Product Demonstration',
+      title: 'Calcasieu Parish Sheriff\'s Office, LA',
+      img: 'article-img3',
+      meta: [
+        {
+          icon: 'currency-usa-icon',
+          label: '389.00',
+        },
+        {
+          icon: 'calendar-icon',
+          label: 'Aug 15, 2023 - Aug 16, 2023',
+        },
+        {
+          icon: 'place-icon',
+          label: '311 W Pioneer Ave, Puyallup, WA 98371',
+        }
+      ]
+    }
+  ).flat();
+
+  var productsGridType1 = [
+    {
+      img: 'products-grid-img1.webp',
+      title: 'Body Worn Excellence',
+      text: 'The X2 Intrensic body camera is a standout in the field of body-worn cameras. Not only is it lightweight and comfortable to wear, but it also boasts an impressive battery life that ensures it will last throughout an entire shift. But what truly sets theX2 Intrensic body camera apart is its ability to capture stunning high-resolution 1080p30 video and lifelike photos.',
+    },
+    {
+      img: 'products-grid-img2.webp',
+      title: 'Digital Evidence Platform',
+      text: 'With our Digital Evidence Platform (DEP) on the cloud, you can streamline your bodyworn camera program without the need for additional staff, overtime, or dedicated positions. Our platform eliminates the need for manual coding, categorizing, processing, maintaining, and managing of your body worn camera program.',
+    },
+    {
+      img: 'products-grid-img3.webp',
+      title: 'Klick-Fast Mounting',
+      text: 'When it comes to mounting your body-worn camera (BWC), Klick-Fast offers the latest and most innovative options. Whether you prefer the traditional spring clip or want to try something new, like the N52 magnetic mounts, we have a wide range of options to suit your needs.',
+    },
+    {
+      img: 'products-grid-img4.webp',
+      title: 'Charging and Uploading',
+      text: 'Our charging and uploading dock provides a convenient and cost-effective solution for uploading media from your secure computer system. You can easily connect your computer to the dock and transfer files without the need for additional servicesor IT involvement. Transfer your files seamlessly and ensure that they are safely stored on your computer system.',
+    }
+  ];
+
+  var productsGridType2 = [
+    {
+      img: 'products-grid-img5.webp',
+      title: 'Cassete',
+      text: 'Each BolaWrap 150 Cassette contains one 7 ft 6 in. Kevlar® cord, designed to wrap an individual from a range of 10-25 feet. Cassette installation is reversible and reloadable in 2-6 seconds.',
+      buttonText: 'See more',
+    },
+    {
+      img: 'products-grid-img6.webp',
+      title: 'Holster',
+      text: 'The Blackhawk Bola Wrap 150 Retention Holster was designed to secure the BolaWrap 150 with the retention level required by most departments. This holster offers distinct carry options and safety features without sacrificing fast access.',
+      buttonText: 'See more',
+    },
+  ];
+
+  var сommunityForm = [
+    {
+      type: 'input',
+      theme: 'white',
+      attr: {
+        placeholder: 'Enter your First name',
+        maxlength: 255,
+        name: 'Name_First',
+        fieldtype: '7',
+        id: 'community-fname'
+      },
+      errorContainer: true
+    },
+    {
+      type: 'input',
+      theme: 'white',
+      attr: {
+        placeholder: 'Enter your Last name',
+        maxlength: '255',
+        name: 'Name_Last',
+        fieldtype: '7',
+        id: 'community-lname'
+      },
+      errorContainer: true
+    },
+    {
+      type: 'input',
+      theme: 'white',
+      attr: {
+        placeholder: 'Enter your Email',
+        fieldtype: '9',
+        maxlength: '255',
+        name: 'Email',
+        checktype: 'c5',
+        value: '',
+        id: 'community-email'
+      },
+      errorContainer: true
+    },
+    {
+      type: 'select',
+      theme: 'white',
+      options: states,
+      attr: {
+        name: 'Dropdown1',
+        checktype: 'c1',
+        id: 'community-state'
+      },
+      errorContainer: true
+    },
+    {
+      type: 'input',
+      theme: 'white',
+      attr: {
+        placeholder: 'Enter your City',
+        fieldtype: '1',
+        maxlength: '255',
+        name: 'SingleLine',
+        checktype: 'c1',
+        value: '',
+        id: 'community-city'
+      },
+      errorContainer: true
+    },
+    {
+      type: 'textarea',
+      theme: 'white',
+      modifier: 'stretch',
+      attr: {
+        placeholder: 'Leave your message here',
+        name: 'MultiLine',
+        checktype: 'c1',
+        maxlength: '65535',
+        id: 'community-message'
+      },
+      errorContainer: true
+    },
+  ]

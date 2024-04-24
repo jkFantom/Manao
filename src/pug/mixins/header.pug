@@ -1,0 +1,34 @@
+-
+  var nav = [
+    'О нас',
+    'Услуги',
+    'Публикации',
+  ]
+
+mixin header(options)
+  header.header
+    .header__overlay
+      .header__inner
+        .logo
+          a(href='#').logo__link
+            img(src='./images/manao-logo.svg', alt='#').logo__img
+
+        .toolbar
+          nav.toolbar__nav.nav
+            each link in nav
+              a.nav__link(href='#')= link
+
+          .contact-links
+            a.contact-links__link(href='tel:+74951281324')
+              svg.icon.contact-links__icon
+                use(xlink:href='#phone-icon')
+              | +7 (495) 128-13-24
+            a.contact-links__link(href='mailto:info@manao-team.com')
+              svg.icon.contact-links__icon
+                use(xlink:href='#mail-icon')
+              | info@manao-team.com
+
+
+        button.control-button(data-mobile-nav='')
+          svg.icon.control-button__icon
+            use(xlink:href='#menu-icon')

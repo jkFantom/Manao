@@ -1,0 +1,84 @@
+@import '../helpers/mixins';
+@import '../helpers/variables';
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (min-width: $screen-sm) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    			"body body body"
+          "gallery gallery figure";
+    gap: 32px 24px;
+  }
+
+  @media (min-width: $screen-xl) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+    grid-template-areas:
+    			"body figure"
+          "gallery figure";
+  }
+}
+
+.about__body {
+  grid-area: body;
+}
+
+.about__title {
+  margin: 0 0 20px 0;
+
+  @media (min-width: $screen-xl) {
+    margin: 0 0 26px 0;
+  }
+}
+
+.about__subtitle {
+  margin: 0 0 18px 0;
+
+  @media (min-width: $screen-xl) {
+    margin: 0 0 23px 0;
+  }
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  grid-area: gallery;
+
+  @media (min-width: $screen-xl) {
+    gap: 30px;
+  }
+}
+
+.images-grid__item {
+  width: 100%;
+  border-radius: 9px;
+}
+
+.about__figure {
+  grid-area: figure;
+  border-radius: 9px;
+  width: 100%;
+  aspect-ratio: 1.363;
+  object-fit: cover;
+
+  @media (min-width: $screen-xl) {
+    aspect-ratio: 1.075;
+  }
+}

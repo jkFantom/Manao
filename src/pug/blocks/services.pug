@@ -1,0 +1,50 @@
+-
+  var services = [
+    {
+      icon: 'service-icon1',
+      text: 'Оптимизировать верстку',
+    },
+    {
+      icon: 'service-icon2',
+      text: 'Создать страницы',
+    },
+    {
+      icon: 'service-icon3',
+      text: 'Адаптировать содержание',
+    },
+    {
+      icon: 'service-icon4',
+      text: 'Настроить интеграцию',
+    },
+    {
+      icon: 'service-icon5',
+      text: 'Модернизировать сайт',
+    },
+    {
+      icon: 'service-icon6',
+      text: 'Исправить ошибки',
+    },
+    {
+      icon: 'service-icon7',
+      text: 'Разработать функционал',
+    },
+    {
+      icon: 'service-icon8',
+      text: 'Обновить систему',
+    }
+  ]
+
+section.section.section_purple
+  .section__inner
+    .section__header
+      h2.h2.section__title Услуги
+      p.section__label Возьмем на себя комплексную поддержку сайта/портала
+
+
+    .section__component
+      .services
+        each service in services
+          .service
+            .service__icon
+              img(src=`./images/${service.icon}.svg`, alt='#')
+            p.services__text= service.text

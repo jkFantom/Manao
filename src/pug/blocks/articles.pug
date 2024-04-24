@@ -1,0 +1,53 @@
+-
+  var articles = Array(3).fill([
+    {
+      img: 'article-img1',
+      title: 'Как мы подбираем людей для аутсорс-продакшна',
+      text: 'Реализация дополнительного поля для элементов, которое генерируется по определенным правилам (как SEO поля).',
+      time: '12 мая 2021',
+      timeFormat: '2021-06-12',
+      logo: 'logo-manao-small',
+    },
+    {
+      img: 'article-img2',
+      title: 'Как мы подбираем людей для аутсорс-продакшна',
+      text: 'Реализация дополнительного поля для элементов, которое генерируется по определенным правилам (как SEO поля).',
+      time: '12 мая 2021',
+      timeFormat: '2021-06-12',
+      logo: 'logo-manao-small',
+    },
+    {
+      img: 'article-img3',
+      title: 'Как мы подбираем людей',
+      text: 'Реализация дополнительного поля для элементов, которое генерируется по определенным правилам (как SEO поля).',
+      time: '12 мая 2021',
+      timeFormat: '2021-06-12',
+      logo: 'logo-cossa-small',
+    }
+  ]).flat();
+
+section.section
+  .section__inner
+    .section__header
+      h2.h2.section__title Публикации
+      p.section__label Делимся своим опытом и экспертизой
+
+    .section__component
+      .swiper-slider
+        .swiper-slider__container
+          .swiper
+            .swiper-wrapper
+              each article in articles
+                .swiper-slide
+                  +article(article)
+
+          .swiper-buttons
+            .swiper-buttons__prev
+              svg.icon.swiper-buttons__icon
+                use(xlink:href='#left-arrow')
+
+            .swiper-buttons__next
+              svg.icon.swiper-buttons__icon
+                use(xlink:href='#right-arrow')
+
+        .swiper-pagination

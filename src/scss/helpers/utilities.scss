@@ -1,0 +1,23 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.hide-on-mobile {
+  @media (max-width: $screen-1440 - 1) {
+    display: none;
+  }
+}
+
+.hide-on-desktop {
+  @media (min-width: $screen-1440) {
+    display: none;
+  }
+}
+

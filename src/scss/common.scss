@@ -1,0 +1,37 @@
+// General Project Styles
+@import 'common/normalize';
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'common/fonts';
+@import 'common/typography';
+@import 'common/icons';
+@import 'common/buttons';
+@import 'common/fields-grid';
+
+@import 'blocks/header';
+@import 'blocks/intro';
+
+@import 'blocks/section';
+@import 'blocks/about';
+@import 'blocks/services';
+@import 'blocks/articles';
+
+@import 'blocks/swiper-custom';
+
+@import 'blocks/footer';
+@import 'blocks/payment';
+
+@import 'blocks/mobile-layer';
+@import 'blocks/dialog';
+
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+
+html {
+  @include font;
+
+  box-sizing: border-box;
+  background: #fff;
+  color: $grey-700;
+}
