@@ -27,31 +27,33 @@ const initHeader = () => {
   });
 }
 
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 1,
-  spaceBetween: 24,
-  navigation: {
-    nextEl: '.swiper-buttons__next',
-    prevEl: '.swiper-buttons__prev',
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    enabled: true,
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
+const initSwiper = () => {
+  new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    navigation: {
+      nextEl: '.swiper-buttons__next',
+      prevEl: '.swiper-buttons__prev',
     },
-    1024: {
-      slidesPerView: 3,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      enabled: true,
     },
-    1240: {
-      slidesPerView: 3,
-      spaceBetween: 30,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      1240: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
     },
-  },
-});
+  });
+}
 
 const feedbackFormValidation = () => {
   const showError = (input, message) => {
@@ -177,11 +179,12 @@ const closeSuccessDialog = () => {
   const closeOnBackDropClick = ({ currentTarget, target }) => target === currentTarget && handleCloseDialog();
 
   closeDialogButton.addEventListener('click', handleCloseDialog);
-
   dialog.addEventListener('click', closeOnBackDropClick);
 }
 
 initHeader();
+
+initSwiper();
 
 feedbackFormValidation();
 
