@@ -1,0 +1,141 @@
+/* intro */
+.intro {
+  background: #040b2a url("./../images/intro-bg1.webp") no-repeat 0 100%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.intro__layout {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 480px;
+  aspect-ratio: 1.71;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 110px 15px 45px 15px;
+}
+@media (min-width: 768px) {
+  .intro__layout {
+    min-height: 560px;
+  }
+}
+@media (min-width: 1240px) {
+  .intro__layout {
+    padding-top: 130px;
+  }
+}
+
+.intro__overlay {
+  position: absolute;
+  left: 33%;
+  top: 0;
+  bottom: 0;
+  z-index: -10;
+  width: 100vw;
+  background: url("./../images/intro-bg2.webp") no-repeat left 0 bottom 8px;
+}
+.intro__overlay:before {
+  content: "";
+  position: absolute;
+  left: 12%;
+  top: 100px;
+  transform: translate(0%, 0%);
+  width: 900px;
+  aspect-ratio: 1;
+  opacity: 0.7;
+  background: radial-gradient(34.71% 34.71% at 50% 50%, rgba(92, 13, 120, 0.54) 0%, rgba(30, 10, 47, 0.1) 100%);
+}
+.intro__overlay:after {
+  content: "";
+  position: absolute;
+  left: 17%;
+  top: -50px;
+  transform: translate(0%, 0%);
+  width: 600px;
+  aspect-ratio: 1.107;
+  opacity: 0.3;
+  background: radial-gradient(rgba(92, 17, 181, 0.5) 0%, transparent 70%);
+}
+
+.intro__body {
+  position: relative;
+  z-index: 5;
+  max-width: 794px;
+  margin: auto 0;
+}
+@media (min-width: 1240px) {
+  .intro__body {
+    margin: 0;
+  }
+}
+
+.intro__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.intro__logo {
+  display: block;
+  max-width: 42.5%;
+  margin-bottom: 12px;
+}
+
+.intro__label {
+  font: 400 normal 18px/1.45 Pragmatica, Helventica, Arial, sans-serif;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.04em;
+  color: #7e779a;
+}
+
+.intro__title {
+  margin: 0;
+}
+
+.intro__button {
+  margin-top: 26px;
+}
+
+.intro__footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+}
+@media (min-width: 1240px) {
+  .intro__footer {
+    margin-top: 94px;
+    justify-content: flex-end;
+  }
+}
+
+.partners {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.partners__title {
+  font: 400 normal 17px/1.4 "TT Commons", Helventica, Arial, sans-serif;
+  padding-top: 2px;
+  color: #fff;
+}
+
+.partners__logos {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.partners__logo {
+  flex: none;
+}
+
+/* !intro */

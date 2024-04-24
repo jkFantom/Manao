@@ -1,0 +1,17 @@
+.payment {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.payment__item {
+  transition: all 0.15s ease-out;
+  flex: none;
+  border-radius: 1px;
+  cursor: pointer;
+  opacity: 0.4;
+}
+.payment__item:hover {
+  opacity: 1;
+}

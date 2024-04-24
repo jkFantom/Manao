@@ -1,0 +1,41 @@
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 24px;
+}
+@media (min-width: 1240px) {
+  .services {
+    gap: 32px 30px;
+  }
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  padding: 22px;
+  border-radius: 9px;
+  background: #fff;
+}
+@media (min-width: 1240px) {
+  .service {
+    padding: 27px 20px 27px 30px;
+  }
+}
+
+.service__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 66px;
+  aspect-ratio: 1;
+  background: linear-gradient(105.96deg, #3f0f72 13.07%, #791281 85.2%);
+  border-radius: 50%;
+}
+
+.services__text {
+  margin: 0 0 0 16px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.46;
+}

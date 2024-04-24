@@ -1,0 +1,19 @@
+.no-scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1439px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hide-on-desktop {
+    display: none;
+  }
+}
