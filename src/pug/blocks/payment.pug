@@ -12,4 +12,5 @@
 
 .payment
   each card in cards
-    img.payment__item(src=`./images/${card}.webp`, alt='#')
+    a.payment__link(href='#')
+      img.payment__item(src=`./images/${card}.webp`, alt='#')

@@ -1451,15 +1451,17 @@ template {
   gap: 16px;
 }
 
-.payment__item {
+.payment__link {
   transition: all 0.15s ease-out;
-  flex: none;
-  border-radius: 1px;
-  cursor: pointer;
   opacity: 0.4;
 }
-.payment__item:hover {
+.payment__link:hover {
   opacity: 1;
+}
+
+.payment__item {
+  display: block;
+  border-radius: 1px;
 }
 
 /* mobile-layer */
