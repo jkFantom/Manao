@@ -1,12 +1,16 @@
-function initHeader() {
-  const htmlEl = document.documentElement;
-  const header = document.querySelector('.header');
+const htmlEl = document.documentElement;
+const form = document.getElementsByName('feedback-form')[0];
+const inputs = form.querySelectorAll('.field__input');
+const dialog = document.getElementById('success-validation-form');
+const closeDialogButton = dialog.querySelector('.close-button');
 
+const initHeader = () => {
+  const header = document.querySelector('.header');
   const mobileLayer = document.querySelector('.mobile-layer');
   const mobileNavButton = document.querySelector('[data-mobile-nav]');
   const closeMobileNavButton = document.querySelector('[data-close-mobile-nav]');
 
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', () => {
     window.scrollY > 0
       ? header.setAttribute('data-fixed', '')
       : header.removeAttribute('data-fixed');
@@ -49,12 +53,8 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-function feedbackFormValidation() {
-  const htmlEl = document.documentElement;
-  const form = document.getElementsByName('feedback-form')[0];
-  const dialog = document.getElementById('success-validation-form');
-
-  function showError(input, message) {
+const feedbackFormValidation = () => {
+  const showError = (input, message) => {
     const errorElement = input.closest('.field').querySelector('.field__error');
 
     if (errorElement) {
@@ -63,7 +63,7 @@ function feedbackFormValidation() {
     }
   }
 
-  function clearError(input) {
+  const clearError = input => {
     const errorElement = input.closest('.field').querySelector('.field__error');
 
     if (errorElement) {
@@ -72,7 +72,7 @@ function feedbackFormValidation() {
     }
   }
 
-  function validateName(input) {
+  const validateName = input => {
     const value = input.value.trim();
     const invalidCharactersRegex = /[!@#$%^&*()_+"0-9]/;
     const maxLength = 20;
@@ -92,7 +92,7 @@ function feedbackFormValidation() {
     }
   }
 
-  function validateComment(input) {
+  const validateComment = input => {
     const value = input.value.trim();
 
     if (value === '') {
@@ -104,7 +104,7 @@ function feedbackFormValidation() {
     }
   }
 
-  function validateWebsite(input) {
+  const validateWebsite = input => {
     const value = input.value.trim();
     const websiteRegex = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$/;
 
@@ -120,14 +120,9 @@ function feedbackFormValidation() {
     }
   }
 
-  function createFormField(selector) {
-    return document.getElementsByName(selector)[0];
-  }
+  const createFormField = selector => document.getElementsByName(selector)[0];
 
-  function addModifierForNotEmptyFields() {
-    const form = document.getElementsByName('feedback-form')[0];
-    const inputs = form.querySelectorAll('.field__input');
-
+  const addModifierForNotEmptyFields = () => {
     inputs.forEach(input => {
       input.addEventListener('change', () => {
         ( input.value.trim() !== '' )
@@ -136,7 +131,8 @@ function feedbackFormValidation() {
       })
     });
   }
-  function isFormValid() {
+
+  const isFormValid = () => {
     const name = createFormField('name');
     const website = createFormField('website');
     const comment = createFormField('comment');
@@ -154,7 +150,7 @@ function feedbackFormValidation() {
 
   addModifierForNotEmptyFields();
 
-  form.addEventListener('submit', function (e) {
+  form.addEventListener('submit', e => {
     e.preventDefault();
 
     if (!isFormValid()) {
@@ -166,33 +162,21 @@ function feedbackFormValidation() {
   });
 }
 
-function printFeeedbackFormDataOnConsole() {
-  const form = document.getElementsByName('feedback-form')[0];
-  const data = Object.fromEntries(new FormData(form).entries());
-
-  console.log(data);
+const printFeeedbackFormDataOnConsole = () => {
+  console.log( Object.fromEntries(new FormData(form).entries()) );
 }
 
-function closeSuccessDialog() {
-  const htmlEl = document.documentElement;
-  const form = document.getElementsByName('feedback-form')[0];
-  const dialog = document.getElementById('success-validation-form');
-  const closeDialogButton = dialog.querySelector('.close-button');
-
+const closeSuccessDialog = () => {
   const handleCloseDialog = () => {
     dialog.close();
     htmlEl.classList.remove('no-scroll');
     printFeeedbackFormDataOnConsole();
     form.reset();
+    inputs.forEach(input => input.classList.remove('field__input_filled'));
   }
+  const closeOnBackDropClick = ({ currentTarget, target }) => target === currentTarget && handleCloseDialog();
 
   closeDialogButton.addEventListener('click', handleCloseDialog);
-
-  function closeOnBackDropClick({ currentTarget, target }) {
-    if (target === currentTarget) {
-      handleCloseDialog();
-    }
-  }
 
   dialog.addEventListener('click', closeOnBackDropClick);
 }
